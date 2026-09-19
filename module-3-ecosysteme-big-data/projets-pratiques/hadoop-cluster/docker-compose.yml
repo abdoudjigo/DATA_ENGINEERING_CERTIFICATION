@@ -1,0 +1,28 @@
+version: "3.8"
+
+# Cluster Hadoop mono-nœud (image de référence bde2020, largement utilisée pour l'apprentissage)
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: de-module3-namenode
+    environment:
+      - CLUSTER_NAME=de-module3
+    ports:
+      - "9870:9870"   # interface web HDFS
+      - "9000:9000"
+    volumes:
+      - hdfs_namenode:/hadoop/dfs/name
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: de-module3-datanode
+    environment:
+      - SERVICE_PRECONDITION=namenode:9870
+    depends_on:
+      - namenode
+    volumes:
+      - hdfs_datanode:/hadoop/dfs/data
+
+volumes:
+  hdfs_namenode:
+  hdfs_datanode:

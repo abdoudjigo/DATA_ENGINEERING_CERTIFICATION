@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  spark:
+    image: bitnami/spark:3.5
+    container_name: de-module4-spark
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8080:8080"   # UI Spark master
+      - "7077:7077"
+    volumes:
+      - ./:/opt/spark-apps

@@ -1,0 +1,21 @@
+version: "3.8"
+
+# Sqoop nécessite Hadoop + une base source. On réutilise le cluster du dossier hadoop-cluster/
+# et on y ajoute un service Sqoop + une base PostgreSQL source.
+services:
+  postgres-source:
+    image: postgres:16
+    container_name: de-module3-sqoop-source
+    environment:
+      POSTGRES_USER: abdou
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: source_db
+    ports:
+      - "5434:5432"
+
+  sqoop:
+    image: bde2020/sqoop:1.4.7-hadoop2.7-java8
+    container_name: de-module3-sqoop
+    depends_on:
+      - postgres-source
+    entrypoint: ["tail", "-f", "/dev/null"]

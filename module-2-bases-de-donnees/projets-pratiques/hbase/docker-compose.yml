@@ -1,0 +1,10 @@
+version: "3.8"
+
+# Image tout-en-un (HBase standalone) pratique pour l'apprentissage
+services:
+  hbase:
+    image: harisekhon/hbase:latest
+    container_name: de-module2-hbase
+    ports:
+      - "16010:16010"  # UI HBase Master
+      - "2181:2181"    # Zookeeper embarqué

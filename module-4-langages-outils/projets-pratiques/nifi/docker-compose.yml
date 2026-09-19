@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  nifi:
+    image: apache/nifi:1.27.0
+    container_name: de-module4-nifi
+    ports:
+      - "8443:8443"
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=abdou
+      - SINGLE_USER_CREDENTIALS_PASSWORD=changeme12345

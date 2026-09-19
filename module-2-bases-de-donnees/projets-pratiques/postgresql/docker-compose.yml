@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: de-module2-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: abdou
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: module2_relationnel
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:

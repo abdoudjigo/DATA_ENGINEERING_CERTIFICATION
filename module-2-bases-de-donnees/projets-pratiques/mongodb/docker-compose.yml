@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: de-module2-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: abdou
+      MONGO_INITDB_ROOT_PASSWORD: changeme
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  mongodata:

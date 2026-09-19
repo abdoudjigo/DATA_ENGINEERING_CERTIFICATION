@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: de-module2-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/changeme123
+    ports:
+      - "7474:7474"   # interface web
+      - "7687:7687"   # bolt (connexion driver)
+    volumes:
+      - neo4jdata:/data
+
+volumes:
+  neo4jdata:
