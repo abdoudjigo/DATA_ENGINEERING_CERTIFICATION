@@ -15,9 +15,12 @@
 
 ## 🧪 Statut de la pratique
 
+## 🧪 Statut de la pratique
+
 - **MongoDB** : 🌿 Notions — vidéo suivie en entier + test pratique condensé (CRUD + agrégation) réalisé après coup.
 - **Neo4j** : 🌿 Notions — vidéo suivie en entier + test pratique condensé (nœuds, relations, MATCH, agrégation) réalisé après coup.
-- **Redis / HBase** : 🌱 Découverte — vidéo suivie, pratique à faire (dossiers Docker déjà prêts dans `projets-pratiques/`).
+- **HBase** : 🌿 Notions — vidéo suivie + test pratique condensé (create, put, scan, get). À retenir : HBase s'appuie sur HDFS comme couche de stockage, et       ajoute un accès rapide par ligne/clé que HDFS seul ne permet pas.
+- **Redis** : 🌱 Découverte — vidéo suivie, pratique à faire (dossier Docker déjà prêt dans `projets-pratiques/`).
 
 ## Ressources utilisées
 
