@@ -20,7 +20,9 @@
 - **MongoDB** : 🌿 Notions — vidéo suivie en entier + test pratique condensé (CRUD + agrégation) réalisé après coup.
 - **Neo4j** : 🌿 Notions — vidéo suivie en entier + test pratique condensé (nœuds, relations, MATCH, agrégation) réalisé après coup.
 - **HBase** : 🌿 Notions — vidéo suivie + test pratique condensé (create, put, scan, get). À retenir : HBase s'appuie sur HDFS comme couche de stockage, et       ajoute un accès rapide par ligne/clé que HDFS seul ne permet pas.
-- **Redis** : 🌱 Découverte — vidéo suivie, pratique à faire (dossier Docker déjà prêt dans `projets-pratiques/`).
+- **Redis** : 🌱 Notions — vidéo suivie + test pratique condensé (SET/GET, EXPIRE/TTL, INCR). Cas d'usage principal : cache et données à durée de vie limitée.
+
+Séquence 3 (NoSQL) terminée côté pratique.
 
 ## Ressources utilisées
 

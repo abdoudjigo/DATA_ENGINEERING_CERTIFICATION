@@ -25,9 +25,12 @@ EXPIRE client:1 60
 TTL client:1
 ```
 
-## 🧠 Résultat observé
+## Résultat observé
 
-*(à compléter une fois le test réalisé)*
+- `SET` / `GET` confirment le fonctionnement clé-valeur de base : une clé, une valeur, pas de structure imposée.
+- `EXPIRE` + `TTL` montrent le cas d'usage central de Redis : une donnée qui expire automatiquement après un délai — typique d'un cache ou d'une session utilisateur.
+- `INCR` incrémente un compteur de façon atomique sans avoir à lire puis réécrire la valeur — utile pour des statistiques en temps réel (vues, votes) sans risque de concurrence.
+- Capture : [`../../../assets/captures/test-redis-module2.png`](../../../assets/captures/test-redis-module2.png)
 
 ## 🛑 Arrêter
 
