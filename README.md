@@ -4,7 +4,7 @@
 > Certification délivrée via la plateforme **[Force-N](https://formation.force-n.sn/course/view.php?id=3104)** — programme national sénégalais de formation aux métiers du numérique, porté par l'Université Numérique Cheikh Hamidou Kane avec le soutien de la Fondation Mastercard.
 
 ![Statut](https://img.shields.io/badge/statut-en%20cours-yellow)
-![Modules](https://img.shields.io/badge/modules-1%2F5%20termin%C3%A9-blue)
+![Modules](https://img.shields.io/badge/modules-2%2F5%20termin%C3%A9-blue)
 ![Plateforme](https://img.shields.io/badge/certification-Force--N-critical)
 ![Stack](https://img.shields.io/badge/stack-Python%20%7C%20SQL%20%7C%20Spark%20%7C%20Docker-informational)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -52,7 +52,7 @@ data-engineering-certification/
 │   ├── tests/
 │   └── ressources/liens.md
 │
-├── module-2-bases-de-donnees/                 (en cours)
+├── module-2-bases-de-donnees/                 (terminé)
 │   ├── README.md
 │   ├── notes/
 │   ├── projets-pratiques/
@@ -114,15 +114,15 @@ flowchart LR
     classDef current fill:#d4a72c,stroke:#9a6700,color:#fff;
     classDef todo fill:#8b949e,stroke:#57606a,color:#fff;
 
-    class M1 done
-    class M2 current
-    class M3,M4,M5 todo
+    class M1,M2 done
+    class M3 current
+    class M4,M5 todo
 ```
 
 | Module | Thème | Statut | Notes | Pratique |
 |---|---|---|---|---|
 | 1 | Introduction au Data Engineering | Terminé | [Voir](./module-1-introduction-data-engineering/notes/resume-module1.md) | — (compréhension pure) |
-| 2 | Bases de données | En cours | En cours | Postgres, MongoDB, Neo4j, HBase faits · Redis à faire |
+| 2 | Bases de données | Terminé | résumés par séquence complets | Postgres, MongoDB, Neo4j, HBase, Redis testés · multidim et Data Lake en théorie |
 | 3 | Écosystème Big Data | À venir | — | Hadoop, Kafka, Sqoop, MapReduce |
 | 4 | Langages & outils | À venir | — | Python, Spark, NiFi, dbt |
 | 5 | Déploiement & Monitoring | Non ouvert | — | — |
@@ -165,7 +165,7 @@ flowchart LR
 </details>
 
 <details>
-<summary><b>Module 2 — Bases de données</b> (en cours)</summary>
+<summary><b>Module 2 — Bases de données</b> (terminé)</summary>
 
 **Durée totale :** 14h (2h + 3h + 3h + 4h + 2h)
 
@@ -193,7 +193,7 @@ Pratique : base "vente" testée (clients, produits, commandes), jointures, GROUP
 | Thème | Contenu | Statut pratique |
 |---|---|---|
 | 2.3.1 | Types NoSQL (document, graphe, clé-valeur, colonne) | — |
-| 2.3.2 | Key-Value Store avec Redis | à faire |
+| 2.3.2 | Key-Value Store avec Redis | testé |
 | 2.3.3 | Document stores avec MongoDB | testé |
 | 2.3.4 | Graph Store avec Neo4j | testé |
 | 2.3.5 | Column store avec HBase | testé |
@@ -208,12 +208,23 @@ Pratique : base "vente" testée (clients, produits, commandes), jointures, GROUP
 | 2.4.4 | Modélisation physique | LAMSADE (p.84-88) |
 | 2.4.5 | Mise en œuvre avec SSAS | Tutoriel |
 
+Traitée en théorie uniquement — SSAS nécessite SQL Server (Windows), pas dockerisable comme les outils précédents.
+
 #### Séquence 2.5 — Data Lake (2h)
 
 | Thème | Contenu | Ressource |
 |---|---|---|
 | 2.5.1 | Présentation des Data Lake | [DataScientest](https://datascientest.com/data-lake-tout-savoir) |
 | 2.5.2 | Création avec outils open source | [Emmanuel Bama](https://emmanuelbama.net/2023/03/05/top-5-des-solutions-open-source-pour-deployer-une-infrastructure-de-data-lakehouse/) |
+
+Traitée en théorie uniquement, au même titre que la séquence 2.4.
+
+**Tests de connaissance :**
+
+| Séquence | Note | Détail |
+|---|---|---|
+| Séquence 3 — NoSQL | 15,50 / 20 | [Voir](./module-2-bases-de-donnees/tests/README.md) |
+| Séquence 5 — Data Lake | 20,00 / 20 | [Voir](./module-2-bases-de-donnees/tests/README.md) |
 
 </details>
 
@@ -315,13 +326,13 @@ Contenu pas encore communiqué par Sonatel Académie / Orange Digital Center.
 ## Roadmap personnelle
 
 - [x] Module 1 — Introduction au Data Engineering
-- [ ] Module 2 — Bases de données
+- [x] Module 2 — Bases de données
   - [x] PostgreSQL
   - [x] MongoDB
   - [x] Neo4j
   - [x] HBase
-  - [ ] Redis
-  - [ ] Data Lake
+  - [x] Redis
+  - [x] Data Lake (théorie)
 - [ ] Module 3 — Écosystème Big Data
 - [ ] Module 4 — Langages & outils
 - [ ] Module 5 — Déploiement & Monitoring
