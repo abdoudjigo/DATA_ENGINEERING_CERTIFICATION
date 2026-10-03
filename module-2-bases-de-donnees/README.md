@@ -1,6 +1,6 @@
 # 🗄️ Module 2 — Bases de données
 
-**🚦 Statut : ![À VENIR](https://img.shields.io/badge/-%C3%80%20VENIR-blue)**
+**🚦 Statut : ![EN COURS](https://img.shields.io/badge/-%C3%80%20VENIR-blue)**
 **Logique de ce module : comprendre → tester → dockeriser.** Pour chaque type de base, un résumé (idées simples à retenir), un test concret, et la plupart du temps un conteneur Docker pour pouvoir relancer l'expérience facilement.
 
 ## 🎯 Séquences officielles
