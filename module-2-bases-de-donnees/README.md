@@ -1,34 +1,40 @@
-# 🗄️ Module 2 — Bases de données
+# Module 2 — Bases de données
 
-**🚦 Statut : ![EN COURS](https://img.shields.io/badge/-%C3%80%20VENIR-blue)**
-**Logique de ce module : comprendre → tester → dockeriser.** Pour chaque type de base, un résumé (idées simples à retenir), un test concret, et la plupart du temps un conteneur Docker pour pouvoir relancer l'expérience facilement.
+**Statut : ![TERMINÉ](https://img.shields.io/badge/-TERMIN%C3%89-success)**
 
-## 🎯 Séquences officielles
+Logique de ce module : comprendre → tester → dockeriser. Pour chaque type de base, un résumé (idées simples à retenir), un test concret quand c'est pertinent, et un conteneur Docker pour pouvoir relancer l'expérience facilement.
 
-| Séquence | Contenu | Durée |
-|---|---|---|
-| Séquence 1 | Introduction : définition de la donnée, types/formats, types de stockage | 2h |
-| Séquence 2 | Bases de données relationnelles — modélisation + PostgreSQL | 3h |
-| Séquence 3 | Bases NoSQL — Document (MongoDB), Clé-valeur (Redis), Graphe (Neo4j), Colonne (HBase) | 3h |
-| Séquence 4 | Bases multidimensionnelles — ROLAP/MOLAP/HOLAP, SSAS | 4h |
-| Séquence 5 | Data Lake | 2h |
+## Séquences officielles
 
-## 🧪 Projets pratiques prévus (`projets-pratiques/`)
-
-| Dossier | 🧪 Ce qu'il démontre | 🐳 Docker | 🎓 Maîtrise visée |
+| Séquence | Contenu | Durée | Pratique |
 |---|---|---|---|
-| `postgresql/` | Modélisation + création d'une base relationnelle, requêtes SQL de base | ✅ | 🌿 Notions |
-| `mongodb/` | Modèle orienté document, insertion/requêtage JSON | ✅ | 🌿 Notions |
-| `redis/` | Cache / clé-valeur, cas d'usage typique | ✅ | 🌿 Notions |
-| `neo4j/` | Modèle orienté graphe, relations et requêtes Cypher | ✅ | 🌿 Notions |
-| `hbase/` | Modèle orienté colonne, écriture/lecture rapide | ✅ | 🌱 Découverte |
+| Séquence 1 | Introduction : définition de la donnée, types/formats, types de stockage | 2h | Théorie uniquement |
+| Séquence 2 | Bases de données relationnelles — modélisation + PostgreSQL | 3h | Testée |
+| Séquence 3 | Bases NoSQL — Document (MongoDB), Clé-valeur (Redis), Graphe (Neo4j), Colonne (HBase) | 3h | Testée |
+| Séquence 4 | Bases multidimensionnelles — ROLAP/MOLAP/HOLAP, SSAS | 4h | Théorie uniquement (SSAS nécessite Windows/SQL Server) |
+| Séquence 5 | Data Lake | 2h | Théorie uniquement |
 
-*(Data Lake : couvert en résumé théorique dans `notes/` — mini-projet pratique à définir selon le temps disponible.)*
+## Projets pratiques (`projets-pratiques/`)
 
-## 📄 Contenu
+| Dossier | Ce qu'il démontre | Docker | Maîtrise visée |
+|---|---|---|---|
+| `postgresql/` | Modélisation + création d'une base relationnelle, jointures, GROUP BY, vue | Oui | Notions |
+| `mongodb/` | Modèle orienté document, CRUD + agrégation | Oui | Notions |
+| `neo4j/` | Modèle orienté graphe, relations et requêtes Cypher | Oui | Notions |
+| `hbase/` | Modèle orienté colonne, create/put/scan/get, s'appuie sur HDFS | Oui | Notions |
+| `redis/` | Clé-valeur, cache, TTL, compteur atomique | Oui | Notions |
 
-- [`notes/`](./notes/) — 📄 un résumé par séquence
-- [`activites/`](./activites/) — 📝 exercices du cours
-- [`tests/`](./tests/) — 🏆 tests de connaissance archivés
-- [`ressources/liens.md`](./ressources/liens.md) — 🔗 liens de référence du programme officiel
-- [`projets-pratiques/`](./projets-pratiques/) — 🧪 mini-projets testés et dockerisés
+## Tests de connaissance
+
+| Séquence | Note | Détail |
+|---|---|---|
+| Séquence 3 — NoSQL | 15,50 / 20 | [Voir](./tests/README.md) |
+| Séquence 5 — Data Lake | 20,00 / 20 | [Voir](./tests/README.md) |
+
+## Contenu
+
+- [`notes/`](./notes/) — un résumé par séquence
+- [`activites/`](./activites/) — exercices du cours
+- [`tests/`](./tests/) — tests de connaissance archivés
+- [`ressources/liens.md`](./ressources/liens.md) — liens de référence du programme officiel
+- [`projets-pratiques/`](./projets-pratiques/) — mini-projets testés et dockerisés
